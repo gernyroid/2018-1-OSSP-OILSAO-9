@@ -1,4 +1,6 @@
 #include "game_states.h"
+#include <time.h>
+
 
 void menu()
 {
@@ -425,6 +427,18 @@ void clean_up()
 
 	SDL_Quit();
 }
+
+int item_make()
+{
+        int random;
+        srand(time(NULL));
+        random = rand()%100;
+
+        if(random >=0 && random <20) return 1; // 라이프 증가 아이템 생성
+
+
+}
+
 
 void main_game(int selector, int mode)//난이도 선택 변수
 {
